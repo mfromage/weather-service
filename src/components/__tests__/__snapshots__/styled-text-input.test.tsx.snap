@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledTextInput matches the snapshot 1`] = `
+<TextInput
+  autoCorrect={false}
+  onChangeText={[MockFunction]}
+  placeholder="type something here..."
+  style={
+    [
+      {
+        "borderColor": "lightgray",
+        "borderRadius": 12,
+        "borderWidth": 0.5,
+        "height": 40,
+        "padding": 12,
+      },
+      undefined,
+    ]
+  }
+  testID="styled-text-input-test-id"
+/>
+`;
