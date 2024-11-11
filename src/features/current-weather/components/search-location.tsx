@@ -77,12 +77,7 @@ const SearchLocation = ({
 
 const styles = StyleSheet.create({
   container: { zIndex: 10 },
-  locationList: {
-    position: 'absolute',
-    width: '100%',
-    top: 40,
-    zIndex: 10,
-  },
+  locationList: {},
 });
 
 export default SearchLocation;

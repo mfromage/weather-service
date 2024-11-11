@@ -1,0 +1,11 @@
+appId: happy-path
+---
+- tapOn:
+    id: "search-form-input"
+- inputText: "Berlin"
+- tapOn: "Search"
+- tapOn:
+    text: "Berlin"
+    index: 1
+- tapOn: "MeteoSource"
+- tapOn: "OpenWeather"
