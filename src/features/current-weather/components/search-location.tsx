@@ -1,11 +1,11 @@
-import {useCallback} from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import { useCallback } from 'react';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import SearchForm from './search-form';
-import {colorStyles} from '@/types/color';
-import {LocationService, Place} from '../types/location';
 import geonamesLocationService from '../services/geonames-location-service';
-import useFetchData from '@/hooks/use-fetch-data';
+import { LocationService, Place } from '../types/location';
 import ListItemTitleSubtitle from '@/components/list-item-title-subtitle';
+import useFetchData from '@/hooks/use-fetch-data';
+import { colorStyles } from '@/types/color';
 
 type SearchLocationProps = {
   onLocationSelected: (location: Place) => void;
@@ -42,7 +42,7 @@ const SearchLocation = ({
   );
 
   const renderLocationListItem = useCallback(
-    ({item}: {item: Place}) => (
+    ({ item }: { item: Place }) => (
       <ListItemTitleSubtitle
         key={item.id}
         item={item}
@@ -76,7 +76,7 @@ const SearchLocation = ({
 };
 
 const styles = StyleSheet.create({
-  container: {zIndex: 10},
+  container: { zIndex: 10 },
   locationList: {
     position: 'absolute',
     width: '100%',

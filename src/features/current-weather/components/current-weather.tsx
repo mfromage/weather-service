@@ -1,19 +1,19 @@
-import {useCallback, useEffect, useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import SearchLocation from './search-location';
 import WeatherCard from './weather-card';
-import {Place} from '../types/location';
-import useFetchData from '@/hooks/use-fetch-data';
-import {colorStyles} from '@/types/color';
-import {WeatherService} from '../types/weather';
+import { Place } from '../types/location';
+import { WeatherService } from '../types/weather';
 import Chip from '@/components/chip';
 import HorizontalList from '@/components/horizontal-list';
+import useFetchData from '@/hooks/use-fetch-data';
+import { colorStyles } from '@/types/color';
 
 type CurrentWeatherProps = {
   weatherServices: [WeatherService, ...WeatherService[]];
 };
 
-const CurrentWeather = ({weatherServices}: CurrentWeatherProps) => {
+const CurrentWeather = ({ weatherServices }: CurrentWeatherProps) => {
   const [selectedWeatherService, setSelectedWeatherService] = useState(
     weatherServices[0],
   );

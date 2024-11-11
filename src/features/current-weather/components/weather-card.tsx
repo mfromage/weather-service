@@ -1,6 +1,6 @@
-import {memo} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {Colors} from '@/types/color';
+import { memo } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Colors } from '@/types/color';
 
 type WeatherCardProps = {
   name: string;
@@ -8,7 +8,7 @@ type WeatherCardProps = {
   summary: string;
   testID?: string;
 };
-const WeatherCard = ({name, temp, summary, testID}: WeatherCardProps) => (
+const WeatherCard = ({ name, temp, summary, testID }: WeatherCardProps) => (
   <View style={styles.container} testID={testID}>
     <View style={styles.cityTemperature}>
       <Text style={styles.city}>{name}</Text>

@@ -1,7 +1,7 @@
-import {memo} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
-import {Colors} from '@/types/color';
-import {PressableItemProps} from '@/types/item';
+import { memo } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Colors } from '@/types/color';
+import { PressableItemProps } from '@/types/item';
 
 type ListItemTitleSubtitleProps<T> = {
   title: string;

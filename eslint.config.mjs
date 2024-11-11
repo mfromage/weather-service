@@ -6,8 +6,8 @@ import tseslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}']},
-  {languageOptions: {globals: globals.browser}},
+  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -27,6 +27,28 @@ export default [
             'sibling',
             'parent',
             'index',
+          ],
+          pathGroups: [
+            {
+              pattern: 'components',
+              group: 'internal',
+            },
+            {
+              pattern: 'features/**',
+              group: 'internal',
+            },
+            {
+              pattern: 'hooks',
+              group: 'internal',
+            },
+            {
+              pattern: 'types',
+              group: 'internal',
+            },
+            {
+              pattern: 'utils',
+              group: 'internal',
+            },
           ],
           pathGroupsExcludedImportTypes: ['internal'],
           alphabetize: {

@@ -1,5 +1,5 @@
+import { fireEvent, render } from '@testing-library/react-native';
 import ListItemTitleSubtitle from '@/components/list-item-title-subtitle';
-import {fireEvent, render} from '@testing-library/react-native';
 
 describe('ListItemTitleSubtitle', () => {
   const setup = (props = {}) => {
@@ -7,34 +7,34 @@ describe('ListItemTitleSubtitle', () => {
     const defaultProps = {
       title: 'Hello',
       subtitle: 'world',
-      item: {id: testId},
+      item: { id: testId },
       onPress: jest.fn(),
     };
     const utils = render(
       <ListItemTitleSubtitle {...defaultProps} {...props} testID={testId} />,
     );
     const listItemTitleSubtitle = utils.getByTestId(testId);
-    return {...utils, listItemTitleSubtitle};
+    return { ...utils, listItemTitleSubtitle };
   };
 
   it('render with given props', () => {
     const title = 'This is title';
     const subtitle = 'not a title';
 
-    const {getByText} = setup({title, subtitle});
+    const { getByText } = setup({ title, subtitle });
     expect(getByText(title)).toBeTruthy();
     expect(getByText(subtitle)).toBeTruthy();
   });
 
   it('matches the snapshot', () => {
-    const {toJSON} = setup();
+    const { toJSON } = setup();
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('call onPress with given item', () => {
     const onPress = jest.fn();
-    const item = {id: 1, name: 'hello'};
-    const {listItemTitleSubtitle} = setup({item, onPress});
+    const item = { id: 1, name: 'hello' };
+    const { listItemTitleSubtitle } = setup({ item, onPress });
 
     fireEvent.press(listItemTitleSubtitle);
     expect(onPress).toHaveBeenCalledWith(item);

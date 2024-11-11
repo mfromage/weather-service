@@ -1,5 +1,5 @@
-import {lazy, Suspense} from 'react';
-import {Platform, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import { lazy, Suspense } from 'react';
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import Splash from './features/current-weather/components/splash';
 import meteoSourceWeatherService from './features/current-weather/services/meteosource-weather-service';
 import owWeatherService from './features/current-weather/services/ow-weather-service';
