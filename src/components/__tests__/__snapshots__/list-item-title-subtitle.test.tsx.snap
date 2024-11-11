@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemTitleSubtitle matches the snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  testID="list-item-title-subtitle-test-id"
+>
+  <View
+    style={
+      {
+        "backgroundColor": "white",
+        "borderBottomWidth": 1,
+        "borderColor": "lightgray",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Hello
+    </Text>
+    <Text
+      style={
+        {
+          "fontSize": 12,
+        }
+      }
+    >
+      world
+    </Text>
+  </View>
+</View>
+`;
