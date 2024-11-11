@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherCard matches the snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "lightgray",
+      "borderRadius": 16,
+      "gap": 16,
+      "padding": 16,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Frankfurt am Main
+    </Text>
+    <Text
+      style={
+        {
+          "fontSize": 24,
+        }
+      }
+    >
+      5.15
+      º
+    </Text>
+  </View>
+  <Text>
+    Mist
+  </Text>
+</View>
+`;

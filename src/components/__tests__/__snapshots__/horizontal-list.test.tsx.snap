@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Horizontal List matches the snapshot 1`] = `
+<RCTScrollView
+  horizontal={true}
+>
+  <View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+      testID="horizontal-list-test-id"
+    >
+      <Text>
+        Text 1
+      </Text>
+      <Text>
+        Text 2
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
