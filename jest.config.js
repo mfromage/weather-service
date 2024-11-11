@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: 'react-native',
   setupFilesAfterEnv: [
     '@testing-library/jest-native/extend-expect',

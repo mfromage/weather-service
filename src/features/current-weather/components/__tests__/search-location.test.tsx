@@ -1,8 +1,7 @@
-import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
-import SearchLocation, {SearchLocationTestId} from '../search-location';
-import {SearchFormTestId} from '../search-form';
-import geonamesLocationService from '../../services/geonames-location-service';
-import {LocationService, Place} from '../../types/location';
+import { act, fireEvent, render } from '@testing-library/react-native';
+import { LocationService, Place } from '../../types/location';
+import { SearchFormTestId } from '../search-form';
+import SearchLocation, { SearchLocationTestId } from '../search-location';
 
 const mockItem: Place = {
   id: 1,
@@ -18,7 +17,7 @@ const mockFindLocations = jest
   .fn()
   .mockResolvedValue([
     mockItem,
-    {id: 2, name: 'London', country: 'United Kingdom'},
+    { id: 2, name: 'London', country: 'United Kingdom' },
   ]);
 
 const mockLocationService: LocationService = {
@@ -35,7 +34,7 @@ describe('SearchLocation', () => {
       />,
     );
   it('shows location list', async () => {
-    const {getByTestId} = setup();
+    const { getByTestId } = setup();
 
     fireEvent.changeText(getByTestId(SearchFormTestId.input), query);
     await act(async () => {
@@ -50,7 +49,7 @@ describe('SearchLocation', () => {
 
   it('calls onLocationSelected when a location is selected', async () => {
     const onLocationSelected = jest.fn();
-    const {getByTestId} = setup({onLocationSelected});
+    const { getByTestId } = setup({ onLocationSelected });
 
     fireEvent.changeText(getByTestId(SearchFormTestId.input), query);
     await act(async () => {
@@ -69,8 +68,8 @@ describe('SearchLocation', () => {
   it('shows error message when error is thrown', async () => {
     const errorMessage = 'some error found';
     const findLocations = jest.fn().mockRejectedValue(new Error(errorMessage));
-    const {getByTestId, getByText} = setup({
-      locationService: {findLocations},
+    const { getByTestId, getByText } = setup({
+      locationService: { findLocations },
     });
 
     fireEvent.changeText(getByTestId(SearchFormTestId.input), query);

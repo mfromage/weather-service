@@ -1,15 +1,15 @@
-import {useCallback, useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {colorStyles} from '@/types/color';
+import { useCallback, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Button from '@/components/button';
 import StyledTextInput from '@/components/styled-text-input';
+import { colorStyles } from '@/types/color';
 
 type SearchFormProps = {
   onSubmit: (query: string) => void;
   disabled?: boolean;
 };
 
-const SearchForm = ({disabled, onSubmit}: SearchFormProps) => {
+const SearchForm = ({ disabled, onSubmit }: SearchFormProps) => {
   const [query, setQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState<string>();
 

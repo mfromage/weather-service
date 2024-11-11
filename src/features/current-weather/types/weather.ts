@@ -1,4 +1,4 @@
-import {Coordinate} from './location';
+import { Coordinate } from './location';
 
 export type Weather = {
   temp: number;

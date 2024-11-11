@@ -1,7 +1,7 @@
-import {METEOSOURCE_API_URL, METEOSOURCE_API_KEY} from '@env';
-import {Coordinate} from '../types/location';
-import {Weather, WeatherService} from '../types/weather';
-import {fetchData} from '@/utils/fetch-data';
+import { METEOSOURCE_API_URL, METEOSOURCE_API_KEY } from '@env';
+import { Coordinate } from '../types/location';
+import { Weather, WeatherService } from '../types/weather';
+import { fetchData } from '@/utils/fetch-data';
 
 type MeteoSourceWeather = {
   temperature: number;

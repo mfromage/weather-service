@@ -1,8 +1,8 @@
-import {memo} from 'react';
-import {StyleSheet, TextInput, TextInputProps} from 'react-native';
-import {Colors} from '@/types/color';
+import { memo } from 'react';
+import { StyleSheet, TextInput, TextInputProps } from 'react-native';
+import { Colors } from '@/types/color';
 
-const StyledTextInput = ({style, ...rest}: TextInputProps) => (
+const StyledTextInput = ({ style, ...rest }: TextInputProps) => (
   <TextInput style={[styles.input, style]} {...rest} autoCorrect={false} />
 );
 

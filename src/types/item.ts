@@ -1,4 +1,4 @@
-import {PressableProps} from 'react-native';
+import { PressableProps } from 'react-native';
 
 export type ItemProps<T> = {
   item?: T;

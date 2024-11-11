@@ -1,12 +1,12 @@
-import {Colors} from '@/types/color';
-import {memo} from 'react';
-import {Pressable, PressableProps, StyleSheet, Text} from 'react-native';
+import { memo } from 'react';
+import { Pressable, PressableProps, StyleSheet, Text } from 'react-native';
+import { Colors } from '@/types/color';
 
 type ButtonProps = {
   title: string;
 } & PressableProps;
 
-const Button = ({title, disabled, ...rest}: ButtonProps) => (
+const Button = ({ title, disabled, ...rest }: ButtonProps) => (
   <Pressable
     style={[styles.button, disabled && styles.disabled]}
     disabled={disabled}

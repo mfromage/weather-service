@@ -1,6 +1,6 @@
-import {GEONAMES_API_URL, GEONAMES_API_KEY} from '@env';
-import {LocationService, Place} from '../types/location';
-import {fetchData} from '@/utils/fetch-data';
+import { GEONAMES_API_URL, GEONAMES_API_KEY } from '@env';
+import { LocationService, Place } from '../types/location';
+import { fetchData } from '@/utils/fetch-data';
 
 type Geoname = {
   geonameId: number;
@@ -28,11 +28,11 @@ const geonamesLocationService: LocationService = {
     }
 
     return response.geonames.map(
-      ({geonameId: id, name, countryName, lat, lng: lon}) => ({
+      ({ geonameId: id, name, countryName, lat, lng: lon }) => ({
         id,
         name,
         country: countryName,
-        coordinate: {lat, lon},
+        coordinate: { lat, lon },
       }),
     );
   },

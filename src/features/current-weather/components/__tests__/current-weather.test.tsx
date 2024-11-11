@@ -1,11 +1,10 @@
-import {act, fireEvent, render} from '@testing-library/react-native';
-import CurrentWeather, {CurrentWeatherTestId} from '../current-weather';
-import {SearchFormTestId} from '../search-form';
-import {WeatherService} from '../../types/weather';
+import { render } from '@testing-library/react-native';
+import { WeatherService } from '../../types/weather';
+import CurrentWeather, { CurrentWeatherTestId } from '../current-weather';
 
 const mockGetCurrentWeather = jest
   .fn()
-  .mockResolvedValue({temp: 8.3, summary: 'clouds'});
+  .mockResolvedValue({ temp: 8.3, summary: 'clouds' });
 const mockWeatherService: WeatherService = {
   id: 'mock-success',
   name: 'Weather Service 1',
@@ -23,7 +22,7 @@ describe('CurrentWeather', () => {
       mockWeatherService,
       mockErrorWeatherService,
     ];
-    const {getByTestId} = render(
+    const { getByTestId } = render(
       <CurrentWeather weatherServices={weatherServices} />,
     );
 
